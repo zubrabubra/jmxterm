@@ -8,7 +8,7 @@ import org.cyclopsgroup.jcli.annotation.Option;
 
 /**
  * Options for main class
- * 
+ *
  * @author <a href="mailto:jiaqi.guo@gmail.com">Jiaqi Guo</a>
  */
 @Cli( name = "jmxterm", description = "Main executable of JMX terminal CLI tool", note = "Without any option, this command opens an interactive command line based console. With a given input file, commands in file will be executed and process ends after file is processed" )
@@ -50,7 +50,7 @@ public class CliMainOptions
     /**
      * @return #setInput(String)
      */
-    public final String getInput()
+    public final String getInput( )
     {
         return input;
     }
@@ -58,7 +58,7 @@ public class CliMainOptions
     /**
      * @return #setOutput(String)
      */
-    public final String getOutput()
+    public final String getOutput( )
     {
         return output;
     }
@@ -66,7 +66,7 @@ public class CliMainOptions
     /**
      * @return Password for user/password authentication
      */
-    public final String getPassword()
+    public final String getPassword( )
     {
         return password;
     }
@@ -74,7 +74,7 @@ public class CliMainOptions
     /**
      * @return #setUrl(String)
      */
-    public final String getUrl()
+    public final String getUrl( )
     {
         return url;
     }
@@ -82,7 +82,7 @@ public class CliMainOptions
     /**
      * @return User name for user/password authentication
      */
-    public final String getUser()
+    public final String getUser( )
     {
         return user;
     }
@@ -90,7 +90,7 @@ public class CliMainOptions
     /**
      * @return Verbose option
      */
-    public final String getVerboseLevel()
+    public final String getVerboseLevel( )
     {
         return verboseLevel;
     }
@@ -98,7 +98,7 @@ public class CliMainOptions
     /**
      * @return True if terminal exits on any failure
      */
-    public final boolean isExitOnFailure()
+    public final boolean isExitOnFailure( )
     {
         return exitOnFailure;
     }
@@ -106,7 +106,7 @@ public class CliMainOptions
     /**
      * @return {@link #setHelp(boolean)}
      */
-    public final boolean isHelp()
+    public final boolean isHelp( )
     {
         return help;
     }
@@ -114,7 +114,7 @@ public class CliMainOptions
     /**
      * @return True if CLI runs without user interaction, such as piped input
      */
-    public final boolean isNonInteractive()
+    public final boolean isNonInteractive( )
     {
         return nonInteractive;
     }
@@ -144,7 +144,7 @@ public class CliMainOptions
     public final void setInput( String file )
     {
         Validate.notNull( file, "Input file can't be NULL" );
-        Validate.isTrue( new File( file ).isFile(), "File " + file + " doesn't exist" );
+        Validate.isTrue( new File( file ).isFile( ), "File " + file + " doesn't exist" );
         this.input = file;
     }
 

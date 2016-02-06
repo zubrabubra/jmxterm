@@ -22,7 +22,7 @@ public class JPMFactory
      */
     public JPMFactory()
     {
-        if ( !SystemUtils.isJavaVersionAtLeast(JavaVersion.JAVA_1_5 ) )
+        if ( !SystemUtils.isJavaVersionAtLeast( JavaVersion.JAVA_1_5 ) )
         {
             jpm =
                 new UnsupportedJavaProcessManager( "JDK version " + SystemUtils.JAVA_RUNTIME_VERSION
